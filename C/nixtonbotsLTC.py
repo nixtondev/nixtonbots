@@ -14,9 +14,3 @@ c.close()
 print response.getvalue()
 response.close()
 
-print("We are NixtonBots.")
-
-def update():
-  print("Python Nixtonltc Script")
-
-update()
