@@ -11,7 +11,7 @@ while True:
         if fname == "Alexander":
             print("We have the same name.")
         elif fname == "Putte":
-            print("Know someone named niklas.")
+            print("Know someone named putte.")
         elif fname == "":
             print("[ ? ] You must answer.")
         else:
