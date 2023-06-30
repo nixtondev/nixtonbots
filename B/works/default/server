@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Server Works.</title>
+<style type="text/css">
+html, body{
+  background-color: #fff;
+  font-family: Consolas, monaco, monospace;
+}
+
+hr {
+display: block;
+height: 1px;
+border: 0;
+border-top: 1px solid #ccc;
+margin: 1em 0;
+padding: 0;
+}
+
+.intro-divider {
+width: 600px;
+margin-left: auto;
+margin-right: auto;
+border-top: 1px solid #f8f8f8;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:767px) {
+
+.intro-divider {
+width: 100%;
+}
+
+.default-mess {
+width: 100%;
+}
+
+}
+
+.title {
+text-align: center;
+font-weight: 400;
+}
+
+.sec-title{
+text-align: center;
+}
+
+.url-link{
+font-weight: bold;
+}
+
+.default-mess{
+width: 500px;
+font-style: italic;
+margin-left: auto;
+margin-right: auto;
+}
+
+.hero-link{
+ color: dimgray;
+ text-decoration: none;
+ border-bottom: 1px dotted dimgray;
+}
+
+.hero-link:hover{
+ color: darkgray;
+ text-decoration: none;
+ border-bottom: 1px solid darkgray;
+}
+
+#links{
+text-align: center;
+}
+</style>
+</head>
+<body>
+<?php
+$URL = $_SERVER['SERVER_NAME'];
+$server = $_SERVER['SERVER_SOFTWARE'];
+?>
+<div class="default">
+<h1 class="title">Server it works!</h1>
+<nav id="links">
+<span class="url-link">PHP Version</span>: <?php echo phpversion(); ?> /
+<span class="url-link">Domain</span>: <a class="hero-link" href="http://<?= $URL; ?>" target="_parent"><?= $URL; ?></a> /
+<span class="url-link">Server</span>: <?php echo $server; ?>
+</nav>
+<hr class="intro-divider">
+<h2 class="sec-title">Welcome to the default web page.</h2>
+<div class="default-mess">
+This is the default welcome page used to test the correct operation of the apache2 server after
+installation on linux systems. If you can read this page, it means that the <a class="hero-link" href="https://httpd.apache.org/" target="_blank">Apache HTTP server</a> 
+installed at this site is working properly.
+</div>
+</div>
+</body>
+</html>
