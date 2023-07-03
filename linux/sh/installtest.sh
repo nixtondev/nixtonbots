@@ -25,7 +25,7 @@ chmod +x $INSTALL_DIR/*.sh
 
 echo "Installing dependencies..."
 
-apt-get install -y depen1 depen2
+sudo apt-get install -y depen1 depen2
 
 # Completion message
 echo "$APP installation completed successfully!"
